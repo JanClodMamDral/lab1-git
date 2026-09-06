@@ -23,7 +23,7 @@ int main(){
     double a, h;
     
     do{
-        cout<< "\n=== Вариант 20: расчёты для пирамиды с квадратным основанием ===\n";
+        cout<< "\n=== Вариант 20: расчёты для пирамиды с квадратным основанием в метрах ===\n";
         cout<< "1. Объём пирамиды\n";
         cout<< "2. Высота боковой грани\n";
         cout<< "0. Выход\n";
@@ -33,18 +33,18 @@ int main(){
         switch(choice){
             case 1:
             do{
-                cout<<"Введите a и h: ";
+                cout<<"Введите a и h в метрах: ";
                 cin>>a>>h;
             } while(a<0||h<0);
-            cout<<"Объем = " << pyramidVolume(a,h)<<"\n";
+            cout<<"Объем в метрах кубических = " << pyramidVolume(a,h)<<"\n";
             break;
 
             case 2:
             do{
-                cout<<"Введите a и h: ";
+                cout<<"Введите a и h в метрах: ";
                 cin>>a>>h;
             } while(a<0||h<0);
-            cout<<"Высота боковой грани = " << pyramidApothem(a,h)<<"\n";
+            cout<<"Высота боковой грани в метрах = " << pyramidApothem(a,h)<<"\n";
             break;
 
             case 0:
