@@ -10,6 +10,11 @@ double pyramidVolume(double a, double h){
     return a*a*h/3;
 }
 
+//Высота боковой грани
+double pyramidApothem(double a, double h){
+    return sqrt(h*h+(a/2)*(a/2));
+}
+
 // ===== Главная функция: меню =====
 
 int main(){
@@ -20,6 +25,7 @@ int main(){
     do{
         cout<< "\n=== Вариант 20: расчёты для пирамиды с квадратным основанием ===\n";
         cout<< "1. Объём пирамиды\n";
+        cout<< "2. Высота боковой грани\n";
         cout<< "0. Выход\n";
         cout<< "Выберите пункт: ";
         cin>> choice;
@@ -31,6 +37,14 @@ int main(){
                 cin>>a>>h;
             } while(a<0||h<0);
             cout<<"Объем = " << pyramidVolume(a,h)<<"\n";
+            break;
+
+            case 2:
+            do{
+                cout<<"Введите a и h: ";
+                cin>>a>>h;
+            } while(a<0||h<0);
+            cout<<"Высота боковой грани = " << pyramidApothem(a,h)<<"\n";
             break;
 
             case 0:
